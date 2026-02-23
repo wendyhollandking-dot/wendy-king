@@ -1,0 +1,32 @@
+backend:
+  name: github
+  repo: wendyhollandking-dot/wendy-king
+  branch: main
+  auth_type: pkce
+  app_id: Ov23livpQ0IT10bKfcZW
+
+media_folder: "src/images"
+public_folder: "/wendy-king/images"
+
+collections:
+  - name: "posts"
+    label: "Blog Posts"
+    folder: "src/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Excerpt", name: "excerpt", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "projects"
+    label: "Projects"
+    folder: "src/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Tag", name: "tag", widget: "string", hint: "e.g. Game / Simulation, Full Course" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
