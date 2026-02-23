@@ -1,0 +1,144 @@
+---
+layout: base.njk
+title: Wendy King — Learning Design
+---
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <div class="hero-eyebrow">Senior Instructional Designer &amp; Learning Systems Architect</div>
+    <h1>Building learning systems that <em>perform.</em></h1>
+    <p class="hero-sub">I'm Wendy King — a senior instructional designer and learning systems architect who builds evidence-based, AI-informed digital experiences. I specialize in interactive courseware, applied simulations, and decision-based learning that drives measurable outcomes.</p>
+    <div class="hero-ctas">
+      <a href="#portfolio" class="btn-primary">View My Work &rarr;</a>
+      <a href="#about" class="btn-secondary">About Me</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-photo-frame">
+      <div class="hero-photo-bg"></div>
+      <div class="hero-photo-accent"></div>
+      <div class="hero-photo">
+        <div class="hero-photo-placeholder">
+          &#x1f4f8;<br/><br/>Your photo here
+        </div>
+      </div>
+      <div class="hero-tag">
+        <div class="hero-tag-icon">&#x1f393;</div>
+        <div class="hero-tag-text">
+          <strong>MEd. Learning Design &amp; Technology</strong>
+          <span>UNC Charlotte</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS STRIP -->
+<div class="stats-strip">
+  <div class="stat">
+    <div class="stat-number">10+</div>
+    <div class="stat-label">Years as Instructional Designer</div>
+  </div>
+  <div class="stat">
+    <div class="stat-number">&#x2726;</div>
+    <div class="stat-label">AI-Forward Designer</div>
+  </div>
+  <div class="stat">
+    <div class="stat-number">15+</div>
+    <div class="stat-label">Years in Education</div>
+  </div>
+  <div class="stat">
+    <div class="stat-number">&#x1f9e0;</div>
+    <div class="stat-label">Psychology Specialist</div>
+  </div>
+</div>
+
+<!-- PORTFOLIO -->
+<section class="portfolio" id="portfolio">
+  <div class="portfolio-header">
+    <div>
+      <div class="section-eyebrow">Selected Work</div>
+      <h2>Projects that <em>move</em> the needle.</h2>
+      <p class="section-intro">From interactive history games to clinical psychology simulations — a sample of what I've built.</p>
+    </div>
+    <a href="/projects/" class="btn-secondary">View All Projects &rarr;</a>
+  </div>
+  <div class="portfolio-grid">
+    <a href="#" class="portfolio-card">
+      <div class="card-thumb thumb-1">&#x1f3db;&#xfe0f;</div>
+      <div class="card-body">
+        <span class="card-tag">Game / Simulation</span>
+        <div class="card-title">The Berlin Airlift Game</div>
+        <p class="card-desc">An interactive decision-making simulation that puts students in the shoes of Cold War diplomats.</p>
+      </div>
+    </a>
+    <a href="#" class="portfolio-card">
+      <div class="card-thumb thumb-2">&#x1f50d;</div>
+      <div class="card-body">
+        <span class="card-tag">Interactive Mystery</span>
+        <div class="card-title">Revolutionary History Mystery</div>
+        <p class="card-desc">A Genially-based investigation activity weaving primary sources into an engaging historical narrative.</p>
+      </div>
+    </a>
+    <a href="#" class="portfolio-card">
+      <div class="card-thumb thumb-3">&#x1f4da;</div>
+      <div class="card-body">
+        <span class="card-tag">Full Course</span>
+        <div class="card-title">U.S. History Course Creation</div>
+        <p class="card-desc">End-to-end course design using OER materials, built for accessibility and student engagement.</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ABOUT TEASER -->
+<section id="about">
+  <div class="about-teaser">
+    <div class="about-text">
+      <div class="section-eyebrow">About Me</div>
+      <h2>I build learning that <em>performs</em> at scale.</h2>
+      <p class="section-intro">With 15+ years spanning K-12, higher ed, and corporate learning, I bring together instructional science, cognitive psychology, and emerging AI tools to design experiences that go beyond content delivery. Currently at Lumen Learning, where I architect digital courseware used by thousands of learners across the social sciences.</p>
+      <blockquote class="about-quote">"Education is the most powerful weapon which you can use to change the world." — Nelson Mandela</blockquote>
+      <a href="#" class="btn-primary">Read My Full Story &rarr;</a>
+    </div>
+    <div class="about-visual">
+      <h3>Wendy King</h3>
+      <p>Learning Designer / Educator</p>
+      <div class="skills-grid">
+        <div class="skill-item"><span class="skill-dot"></span>Instructional Design</div>
+        <div class="skill-item"><span class="skill-dot"></span>OER Advocacy</div>
+        <div class="skill-item"><span class="skill-dot"></span>Psychology &amp; Learning</div>
+        <div class="skill-item"><span class="skill-dot"></span>Course Development</div>
+        <div class="skill-item"><span class="skill-dot"></span>Interactive Media</div>
+        <div class="skill-item"><span class="skill-dot"></span>Accessibility</div>
+        <div class="skill-item"><span class="skill-dot"></span>SCORM / LMS</div>
+        <div class="skill-item"><span class="skill-dot"></span>Game-Based Learning</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="blog">
+  <div class="section-eyebrow">From the Blog</div>
+  <h2>Musings on <em>learning</em> and design.</h2>
+  <p class="section-intro">Thoughts on instructional design, educational technology, open education, and the occasional tangent.</p>
+  <div class="blog-grid">
+    {% for post in collections.post | reverse %}
+    {% if loop.index <= 3 %}
+    <a href="{{ post.url }}" class="blog-card">
+      <div class="blog-date">{{ post.date | dateFormat }}</div>
+      <div class="blog-title">{{ post.data.title }}</div>
+      <p class="blog-excerpt">{{ post.data.excerpt }}</p>
+    </a>
+    {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band" id="contact">
+  <h2>Have a project in mind? Let's <em>build something</em> that works.</h2>
+  <a href="mailto:wendy@example.com" class="btn-cta">Get In Touch &rarr;</a>
+</div>
