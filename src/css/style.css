@@ -195,6 +195,23 @@ h1 em {
   z-index: 1;
 }
 
+/* Organic blob decorations */
+.hero-visual::before {
+  content: '';
+  position: absolute; top: 10%; right: 5%;
+  width: 200px; height: 200px;
+  background: rgba(244,108,27,0.15);
+  border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
+}
+
+.hero-visual::after {
+  content: '';
+  position: absolute; bottom: 15%; left: 5%;
+  width: 150px; height: 150px;
+  background: rgba(46,64,87,0.12);
+  border-radius: 40% 60% 30% 70% / 60% 40% 50% 40%;
+}
+
 .hero-photo-frame {
   position: relative;
   width: 300px;
@@ -646,6 +663,44 @@ h1            { animation: fadeUp 0.6s 0.1s ease both; }
 .hero-sub     { animation: fadeUp 0.6s 0.2s ease both; }
 .hero-ctas    { animation: fadeUp 0.6s 0.3s ease both; }
 .hero-visual  { animation: fadeUp 0.7s 0.2s ease both; }
+
+/* ── IMPACT LIST ── */
+.impact-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.impact-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+
+.impact-item:last-child {
+  grid-column: 1 / -1;
+}
+
+.impact-diamond {
+  width: 10px;
+  height: 10px;
+  background: var(--orange);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+  margin-top: 0.35rem;
+}
+
+.impact-item p {
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: #444;
+}
 
 /* ── ACTIVE NAV ── */
 .nav-links a.active { opacity: 1; color: var(--orange); }
