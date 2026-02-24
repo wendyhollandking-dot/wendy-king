@@ -1,0 +1,26 @@
+---
+layout: base.njk
+title: Blog — Wendy King
+---
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="hero-eyebrow">Blog</div>
+    <h1>Musings on <em>learning</em> and design.</h1>
+    <p>Thoughts on instructional design, educational technology, open education, and the occasional tangent.</p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-inner">
+    <div class="blog-list">
+      {% for post in collections.post | reverse %}
+      <a href="{{ post.url | url }}" class="blog-list-item">
+        <div class="blog-date">{{ post.date | dateFormat }}</div>
+        <div class="blog-title">{{ post.data.title }}</div>
+        <p class="blog-excerpt">{{ post.data.excerpt }}</p>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>

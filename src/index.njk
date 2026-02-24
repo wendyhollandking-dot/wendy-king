@@ -156,7 +156,7 @@ title: Wendy King — Learning Design
   <div class="blog-grid">
     {% for post in collections.post | reverse %}
     {% if loop.index <= 3 %}
-    <a href="{{ post.url }}" class="blog-card">
+    <a href="{{ post.url | url }}" class="blog-card">
       <div class="blog-date">{{ post.date | dateFormat }}</div>
       <div class="blog-title">{{ post.data.title }}</div>
       <p class="blog-excerpt">{{ post.data.excerpt }}</p>
