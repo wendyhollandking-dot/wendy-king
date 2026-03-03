@@ -3,11 +3,14 @@
 :root {
   --orange: #F46C1B;
   --orange-light: #FFF0E6;
-  --slate: #2E4057;
   --charcoal: #1A1A2E;
+  --slate: #2E4057;
+  --slate-light: #EEF0F5;
   --white: #FFFFFF;
   --off-white: #F8F8F6;
+  --mid: #666;
   --mid-gray: #9A9A9A;
+  --light-gray: #EEEEEE;
   --display: 'Playfair Display', serif;
   --body: 'DM Sans', sans-serif;
 }
@@ -1063,3 +1066,76 @@ article.post hr {
     grid-template-columns: 1fr;
   }
 }
+
+/* ══════════════════════════════════════════════════
+   CASE STUDY / PORTFOLIO PROJECT PAGES
+   ══════════════════════════════════════════════════ */
+
+/* ── CASE STUDY PAGE HERO ── */
+.case-hero { padding: 9rem 4rem 4rem; background: var(--off-white); border-bottom: 1px solid var(--light-gray); }
+.breadcrumb { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.5rem; }
+.breadcrumb a { color: var(--mid); text-decoration: none; }
+.breadcrumb a:hover { color: var(--orange); }
+.breadcrumb span { color: var(--orange); }
+.hero-tag-row { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1.25rem; }
+.tag { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; background: var(--orange-light); color: var(--orange); padding: 0.25rem 0.75rem; border-radius: 20px; }
+.tag.slate { background: var(--slate-light); color: var(--slate); }
+.case-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 900; line-height: 1.1; letter-spacing: -0.02em; color: var(--charcoal); margin-bottom: 1rem; }
+.case-hero h1 em { font-style: italic; color: var(--orange); }
+.case-hero .subtitle { font-size: 1.05rem; font-weight: 300; line-height: 1.75; color: var(--mid); max-width: 680px; }
+
+/* ── CASE STUDY CONTENT ── */
+.content { max-width: 780px; margin: 0 auto; padding: 5rem 4rem; }
+.case-section { margin-bottom: 3.5rem; }
+.content h2 { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; line-height: 1.2; color: var(--charcoal); margin-bottom: 0.9rem; }
+.content h2 em { font-style: italic; color: var(--orange); }
+.content p { font-size: 1rem; font-weight: 300; line-height: 1.85; color: #444; margin-bottom: 1.1rem; }
+.content p:last-child { margin-bottom: 0; }
+
+/* ── CALLOUTS ── */
+.callout { background: var(--orange-light); border-left: 3px solid var(--orange); border-radius: 0 8px 8px 0; padding: 1.1rem 1.4rem; margin: 1.4rem 0; }
+.callout p { font-size: 0.95rem; }
+.callout.slate { background: var(--slate-light); border-left-color: var(--slate); }
+.callout.dark { background: var(--charcoal); border-left-color: var(--orange); }
+.callout.dark p { color: rgba(255,255,255,0.8); }
+.callout.dark strong { color: white; }
+
+/* ── CASE STUDY BLOCKQUOTE ── */
+.content blockquote { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-style: italic; line-height: 1.65; color: var(--charcoal); border-left: 3px solid var(--orange); padding-left: 1.4rem; margin: 1.75rem 0; }
+
+/* ── INSIGHT CARDS ── */
+.insight-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; margin: 1.5rem 0; }
+.insight-card { background: var(--off-white); border-radius: 10px; padding: 1.35rem; border-top: 3px solid var(--orange); }
+.insight-card.slate-top { border-top-color: var(--slate); }
+.insight-card h4 { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.4rem; }
+.insight-card p { font-size: 0.875rem; }
+
+/* ── OUTCOME STRIP ── */
+.outcome-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin: 1.75rem 0; }
+.outcome-stat { text-align: center; background: var(--charcoal); border-radius: 10px; padding: 1.75rem 1rem; }
+.outcome-number { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 900; color: var(--orange); line-height: 1; margin-bottom: 0.35rem; }
+.outcome-label { font-size: 0.75rem; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+
+/* ── REFLECTION ── */
+.reflection { background: var(--off-white); border-radius: 12px; padding: 2.25rem; margin: 1.75rem 0; }
+.reflection h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.85rem; }
+
+/* ── BACK LINK ── */
+.back-link { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; font-weight: 500; color: var(--orange); text-decoration: none; padding-top: 2.5rem; margin-top: 1rem; border-top: 1px solid var(--light-gray); width: 100%; }
+.back-link:hover { opacity: 0.7; }
+
+/* ── HACKS GRID ── */
+.hacks-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin: 1.75rem 0; }
+.hack-card { background: var(--off-white); border-radius: 8px; padding: 1.1rem 1.25rem; border-left: 3px solid var(--orange); }
+.hack-module { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.3rem; }
+.hack-name { font-size: 0.9rem; font-weight: 500; color: var(--charcoal); line-height: 1.3; margin-bottom: 0.3rem; }
+.hack-skill { font-size: 0.8rem; font-weight: 300; color: var(--mid); }
+
+/* ── CASE STUDY TIMELINE ── */
+.case-timeline { margin: 2rem 0; border-left: 2px solid var(--light-gray); padding-left: 2rem; }
+.case-timeline .timeline-item { position: relative; margin-bottom: 2rem; }
+.case-timeline .timeline-item:last-child { margin-bottom: 0; }
+.case-timeline .timeline-dot { position: absolute; left: -2.6rem; top: 0.3rem; width: 12px; height: 12px; background: var(--orange); border-radius: 50%; }
+.case-timeline .timeline-date { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.3rem; }
+.case-timeline .timeline-title { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.4rem; }
+.case-timeline .timeline-body { font-size: 0.9rem; font-weight: 300; line-height: 1.7; color: #555; }
