@@ -16,7 +16,7 @@ thumbnail: "/images/posts/multimedia-dos-donts.png"
 
 My design can be accessed here: [Multimedia Dos and Don'ts on Piktochart](https://create.piktochart.com/output/52154724-multimedia-dos-and-don-ts).
 
-I found this to be a challenging task, as there was a ton of interesting and pertinent information within the chapters we read and we were asked to create an infographic that summarized all the main theories. It wasn't until the following week that we got to watch a video which summarized most of the tips I included in the infographic.
+For this class project, I was tasked with summarizing main theories and guidelines for multimedia learning.
 
 ## Reference
 
