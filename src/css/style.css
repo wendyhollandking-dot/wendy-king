@@ -65,7 +65,7 @@ nav {
   text-decoration: none;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  opacity: 0.7;
+  opacity: 0.82;
   transition: opacity 0.2s, color 0.2s;
 }
 
@@ -331,7 +331,7 @@ h1 em {
   font-weight: 400;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  opacity: 0.7;
+  opacity: 0.82;
 }
 
 /* ── SECTION SHARED ── */
@@ -653,7 +653,7 @@ footer {
 
 .footer-links a {
   font-size: 0.8rem;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.7);
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -662,7 +662,7 @@ footer {
 
 .footer-copy {
   font-size: 0.8rem;
-  color: rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.6);
 }
 
 /* ── ANIMATIONS ── */
@@ -811,7 +811,7 @@ h1            { animation: fadeUp 0.6s 0.1s ease both; }
   text-transform: uppercase; color: var(--orange);
   padding-top: 0.2rem;
 }
-.timeline-content h4 {
+.timeline-content h3 {
   font-family: var(--display); font-size: 1.05rem; font-weight: 700;
   color: var(--charcoal); margin-bottom: 0.2rem;
 }
@@ -854,7 +854,7 @@ h1            { animation: fadeUp 0.6s 0.1s ease both; }
   border-top: 3px solid var(--orange);
   box-shadow: 0 4px 20px rgba(0,0,0,0.05);
 }
-.approach-card h4 {
+.approach-card h3 {
   font-family: var(--display); font-size: 1.1rem; font-weight: 700;
   color: var(--charcoal); margin-bottom: 0.75rem;
 }
@@ -1107,14 +1107,14 @@ article.post hr {
 .insight-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; margin: 1.5rem 0; }
 .insight-card { background: var(--off-white); border-radius: 10px; padding: 1.35rem; border-top: 3px solid var(--orange); }
 .insight-card.slate-top { border-top-color: var(--slate); }
-.insight-card h4 { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.4rem; }
+.insight-card h3 { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.4rem; }
 .insight-card p { font-size: 0.875rem; }
 
 /* ── OUTCOME STRIP ── */
 .outcome-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin: 1.75rem 0; }
 .outcome-stat { text-align: center; background: var(--charcoal); border-radius: 10px; padding: 1.75rem 1rem; }
 .outcome-number { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 900; color: var(--orange); line-height: 1; margin-bottom: 0.35rem; }
-.outcome-label { font-size: 0.75rem; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+.outcome-label { font-size: 0.75rem; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.7); }
 
 /* ── REFLECTION ── */
 .reflection { background: var(--off-white); border-radius: 12px; padding: 2.25rem; margin: 1.75rem 0; }
@@ -1139,3 +1139,334 @@ article.post hr {
 .case-timeline .timeline-date { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.3rem; }
 .case-timeline .timeline-title { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.4rem; }
 .case-timeline .timeline-body { font-size: 0.9rem; font-weight: 300; line-height: 1.7; color: #555; }
+
+/* ══════════════════════════════════════════════════
+   ACCESSIBILITY
+   ══════════════════════════════════════════════════ */
+
+/* ── SKIP LINK ── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 200;
+  background: var(--orange);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0 0 4px 4px;
+  font-family: var(--body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* ── FOCUS STYLES ── */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 2px;
+}
+
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ── REDUCED MOTION ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ══════════════════════════════════════════════════
+   RESPONSIVE BREAKPOINTS
+   ══════════════════════════════════════════════════ */
+
+/* ── TABLET (768px) ── */
+@media (max-width: 768px) {
+
+  nav {
+    padding: 1rem 1.5rem;
+  }
+
+  .nav-links {
+    gap: 1.25rem;
+  }
+
+  .nav-links a {
+    font-size: 0.75rem;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 7rem 1.5rem 3rem;
+    gap: 2.5rem;
+    min-height: auto;
+    text-align: center;
+  }
+
+  .hero-text { order: 1; }
+  .hero-visual { order: 2; }
+
+  .hero-sub {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-ctas {
+    justify-content: center;
+  }
+
+  .hero-visual-bubble {
+    width: 320px;
+    height: 360px;
+  }
+
+  .hero-photo-frame {
+    width: 220px;
+    height: 280px;
+  }
+
+  .hero-tag {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    margin-top: 1rem;
+    justify-content: center;
+  }
+
+  .stats-strip {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem 1.5rem;
+  }
+
+  section {
+    padding: 4rem 1.5rem;
+  }
+
+  .section {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-teaser {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .two-col {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .two-col.reverse {
+    direction: ltr;
+  }
+
+  .approach-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .insight-row {
+    grid-template-columns: 1fr;
+  }
+
+  .hacks-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .outcome-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+
+  .timeline-divider {
+    margin-left: 0;
+  }
+
+  .impact-list {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-item:last-child {
+    grid-column: auto;
+  }
+
+  .page-hero {
+    padding: 7rem 1.5rem 3rem;
+  }
+
+  .cta-band {
+    padding: 3.5rem 1.5rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer {
+    padding: 1.5rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links {
+    gap: 1.25rem;
+  }
+
+  .case-hero {
+    padding: 7rem 1.5rem 3rem;
+  }
+
+  .content {
+    padding: 3rem 1.5rem;
+  }
+
+  article.post {
+    padding: 7rem 1.5rem 3rem;
+  }
+
+  .card-thumb {
+    height: 160px;
+  }
+
+  .project-card-thumb {
+    height: 170px;
+  }
+
+  .post-featured-image {
+    max-height: 280px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .looking-for {
+    padding: 3.5rem 1.5rem;
+  }
+}
+
+/* ── SMALL PHONE (480px) ── */
+@media (max-width: 480px) {
+
+  nav {
+    padding: 0.75rem 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .nav-links {
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .nav-links a {
+    font-size: 0.7rem;
+    letter-spacing: 0.02em;
+  }
+
+  .hero {
+    padding: 6rem 1rem 2rem;
+  }
+
+  .hero-visual-bubble {
+    width: 240px;
+    height: 270px;
+  }
+
+  .hero-photo-frame {
+    width: 180px;
+    height: 230px;
+  }
+
+  .stats-strip {
+    padding: 1.5rem 1rem;
+    gap: 1.5rem;
+  }
+
+  section {
+    padding: 3rem 1rem;
+  }
+
+  .section {
+    padding: 2.5rem 1rem;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-hero {
+    padding: 6rem 1rem 2rem;
+  }
+
+  .cta-band {
+    padding: 2.5rem 1rem;
+  }
+
+  footer {
+    padding: 1.25rem 1rem;
+  }
+
+  .case-hero {
+    padding: 6rem 1rem 2rem;
+  }
+
+  .content {
+    padding: 2rem 1rem;
+  }
+
+  article.post {
+    padding: 6rem 1rem 2rem;
+  }
+
+  .card-thumb {
+    height: 140px;
+  }
+
+  .project-card-thumb {
+    height: 150px;
+  }
+
+  .post-featured-image {
+    max-height: 200px;
+  }
+
+  .outcome-stat {
+    padding: 1.25rem 0.75rem;
+  }
+
+  .hack-card {
+    padding: 0.9rem 1rem;
+  }
+
+  .blog-list-thumb {
+    height: 150px;
+  }
+}
